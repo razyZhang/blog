@@ -1,0 +1,1512 @@
+@font-face {
+  font-family: AdobeHT-CH;
+  src: url('../../font/AdobeHeitiStd.otf');
+}
+@font-face {
+  font-family: Eras-EN;
+  src: url('../../font/ERASLGHT.TTF');
+}
+@font-face {
+  font-family: FZHJT-CH;
+  src: url('../../font/FZHJT.TTF');
+}
+@font-face {
+  font-family: Khmer-EN;
+  src: url('../../font/KhmerUI.ttf');
+}
+@font-face {
+  font-family: Poiret-EN;
+  font-stretch: expanded;
+  src: url('../../font/PoiretOne.ttf');
+}
+input,
+button,
+select,
+textarea,
+a {
+  border: none;
+  outline: none;
+  background: none;
+  -webkit-appearance: none;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+}
+::-webkit-scrollbar {
+  /*滚动条整体样式,高宽分别对应横竖滚动条的尺寸*/
+  width: 3px;
+  height: 3px;
+}
+::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  width: 3px;
+  height: 3px;
+  background: #666;
+}
+::-webkit-scrollbar-track {
+  /*滚动条外轨道*/
+  display: none;
+}
+::-webkit-scrollbar-track-piece {
+  /*滚动条内轨道*/
+  display: none;
+}
+::-webkit-scrollbar-button {
+  /*两端按钮*/
+  display: none;
+}
+::-webkit-scrollbar-corner {
+  /*定义右下角汇合处的样式*/
+  display: none;
+}
+input:-webkit-input-placeholder {
+  color: #D9D9D9;
+  letter-spacing: 0.05em;
+}
+input:input:-moz-placeholder {
+  color: #D9D9D9;
+  letter-spacing: 0.05em;
+}
+input:-ms-input-placeholder {
+  color: #D9D9D9;
+  letter-spacing: 0.05em;
+}
+ul {
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+html {
+  font-family: AdobeHT-CH;
+}
+body {
+  margin: 0;
+  width: 100%;
+  background-color: #FFF;
+}
+/* 超小屏幕（小平板，大于等于 720px） */
+@media (min-width: 720px) {
+  #background {
+    width: 576px;
+    height: 405px;
+    margin: 0 auto;
+  }
+  #background .header {
+    width: 100%;
+    height: 10%;
+  }
+  #background .header .logo {
+    display: block;
+    float: left;
+    width: 20%;
+    height: 80%;
+    margin: 0.72px 0 0 0;
+    background-image: url("../../img/blog/logo.png");
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+  }
+  #background .header .nevigation {
+    float: right;
+    width: 50%;
+    height: 100%;
+  }
+  #background .header .nevigation .box {
+    float: left;
+    width: 72px;
+    padding: 7.2px 0 0 0;
+  }
+  #background .header .nevigation .box a {
+    display: block;
+    height: 60%;
+    width: 60%;
+    margin: 0 auto;
+    padding: 0 0 2px 0;
+    font-size: 11.52px;
+    font-family: Poiret-EN;
+    text-align: center;
+    color: #000;
+    border-bottom: 1px solid #FFF;
+    transition: border-color 1s;
+  }
+  #background .header .nevigation .box a:hover {
+    border-bottom: 1px solid #000;
+  }
+  #background .content {
+    display: block;
+    width: 100%;
+    height: 80%;
+  }
+  #background .content #welcome {
+    display: none;
+    width: 40%;
+    height: 70%;
+    margin: 0 auto;
+    margin-top: 43.2px;
+  }
+  #background .content #welcome .glass {
+    display: block;
+    width: 100%;
+    height: 45%;
+    background-image: url("../../img/blog/glass.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+  }
+  #background .content #welcome .title {
+    display: block;
+    width: 100%;
+    height: 10%;
+    font-size: 12.96px;
+    font-family: Eras-EN;
+    font-weight: bold;
+    text-align: center;
+    color: #000;
+  }
+  #background .content #welcome .subtitle {
+    display: block;
+    width: 100%;
+    height: 30%;
+    padding: 14.4px 0 0 0;
+    font-size: 9.36px;
+    font-family: Eras-EN;
+    text-align: center;
+    color: #333;
+  }
+  #background .content #catalog {
+    width: 100%;
+    height: 100%;
+    padding: 14.4px 0 14.4px 0;
+  }
+  #background .content #catalog .left-box {
+    float: left;
+    width: 20%;
+    height: 100%;
+    border-right: 1px solid #999;
+  }
+  #background .content #catalog .left-box .banner-box {
+    display: block;
+    width: 93.6px;
+    height: 72px;
+    padding: 3.6px;
+    margin: 14.4px auto;
+    border: 1px solid #999;
+    box-shadow: 1px 1px 3px #333;
+  }
+  #background .content #catalog .left-box .banner-box img {
+    width: 86.4px;
+    height: 64.8px;
+  }
+  #background .content #catalog .left-box .abstract {
+    display: -webkit-box;
+    /** 对象作为伸缩盒子模型显示 **/
+    margin: 0 auto;
+    padding: 0 3.6px;
+    width: 108px;
+    height: 60%;
+    font-size: 7.2px;
+    line-height: 12.2px;
+    font-family: AdobeHT-CH;
+    color: #333;
+    text-align: left;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-wrap: break-word;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+    -webkit-line-clamp: 10;
+    /** 显示的行数 **/
+  }
+  #background .content #catalog .main-box {
+    float: left;
+    width: 80%;
+    height: 100%;
+    display: none;
+  }
+  #background .content #catalog .main-box .left-second-box {
+    float: left;
+    width: 10%;
+    height: 100%;
+  }
+  #background .content #catalog .main-box .left-second-box span {
+    display: block;
+    width: 40%;
+    height: 100%;
+    margin: 0 auto;
+    background-image: url("../../img/blog/leftward.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    transition: opacity 1s;
+    opacity: 0;
+  }
+  #background .content #catalog .main-box .left-second-box span:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  #background .content #catalog .main-box .middle-box {
+    float: left;
+    width: 80%;
+    height: 100%;
+    padding: 0 7.2px 0 0;
+    overflow: scroll;
+  }
+  #background .content #catalog .main-box .middle-box .title-box {
+    width: 100%;
+    height: 28.8px;
+    display: none;
+  }
+  #background .content #catalog .main-box .middle-box .title-box .show-box {
+    width: 100%;
+    height: 100%;
+    border-left: 2px solid #FFF;
+    padding: 7.2px 0 0 0;
+    transition: border-color 1s;
+  }
+  #background .content #catalog .main-box .middle-box .title-box .show-box span {
+    display: block;
+    float: left;
+    height: 100%;
+    text-align: center;
+    font-family: FZHJT-CH;
+  }
+  #background .content #catalog .main-box .middle-box .title-box .show-box .num {
+    width: 10%;
+    color: #333;
+    font-size: 14.4px;
+    font-family: Poiret-EN;
+  }
+  #background .content #catalog .main-box .middle-box .title-box .show-box .title {
+    width: 50%;
+    color: #000;
+    padding: 4.32px 0 0 0;
+    font-size: 10.8px;
+    font-family: Eras-EN;
+    overflow: hidden;
+  }
+  #background .content #catalog .main-box .middle-box .title-box .show-box .author {
+    width: 30%;
+    color: #333;
+    padding: 8.64px 0 0 0;
+    font-size: 7.2px;
+    font-weight: bold;
+    font-family: FZHJT-CH;
+    overflow: hidden;
+  }
+  #background .content #catalog .main-box .middle-box .title-box .show-box .time {
+    width: 10%;
+    color: #333;
+    padding: 10.8px 0 0 0;
+    font-size: 5.04px;
+    font-family: Khmer-EN;
+  }
+  #background .content #catalog .main-box .middle-box .title-box .show-box:hover {
+    border-color: #C1C1C1;
+    cursor: pointer;
+  }
+  #background .content #catalog .main-box .middle-box .title-box .hide-box {
+    display: none;
+    padding: 7.2px 0;
+    font-size: 7.2px;
+  }
+  #background .content #catalog .main-box .middle-box .detail-title {
+    width: 100%;
+    color: #000;
+    padding: 0 0 7.2px 0;
+    font-size: 14.4px;
+    font-family: Eras-EN;
+    text-align: center;
+    letter-spacing: 0.1em;
+  }
+  #background .content #catalog .main-box .middle-box .detail-box {
+    width: 100%;
+    padding: 0 14.4px 7.2px 0;
+    color: #999;
+    font-size: 7.2px;
+    font-family: Eras-EN;
+    font-weight: bold;
+  }
+  #background .content #catalog .main-box .middle-box .detail-box span {
+    display: block;
+    float: right;
+    width: 25%;
+    text-align: right;
+  }
+  #background .content #catalog .main-box .middle-box .detail-banner {
+    width: 100%;
+    padding: 14.4px 0;
+  }
+  #background .content #catalog .main-box .middle-box .detail-banner img {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    box-shadow: 2px 2px 5px #333;
+  }
+  #background .content #catalog .main-box .right-second-box {
+    float: left;
+    width: 10%;
+    height: 100%;
+  }
+  #background .content #catalog .main-box .right-second-box span {
+    display: block;
+    width: 40%;
+    height: 100%;
+    margin: 0 auto;
+    background-image: url("../../img/blog/rightward.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    transition: opacity 1s;
+    opacity: 0;
+  }
+  #background .content #catalog .main-box .right-second-box span:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  #background .content #about {
+    width: 100%;
+    height: 100%;
+    padding: 14.4px 0 14.4px 0;
+  }
+  #background .content #about .about-members-box {
+    width: 100%;
+    height: 432px;
+  }
+  #background .content #about .about-members-box .member-info-box {
+    float: left;
+    width: 25%;
+    height: 216px;
+    padding: 7.2px;
+  }
+  #background .content #about .about-members-box .member-info-box .top-box {
+    width: 100%;
+    height: 72px;
+  }
+  #background .content #about .about-members-box .member-info-box .top-box .avatar-box {
+    float: left;
+    width: 57.6px;
+    height: 57.6px;
+    margin: 0 7.2px 7.2px 0;
+    border-radius: 50%;
+    border: 3px soild #999;
+    box-shadow: 2px 2px 4px #333;
+    overflow: hidden;
+  }
+  #background .content #about .about-members-box .member-info-box .top-box .avatar-box img {
+    width: 100%;
+    height: 100%;
+  }
+  #background .content #about .about-members-box .member-info-box .top-box .name-box {
+    float: left;
+    width: 57.6px;
+    height: 57.6px;
+  }
+  #background .content #about .about-members-box .member-info-box .top-box .name-box .name {
+    display: block;
+    padding: 7.2px 0 0 0;
+    font-size: 8.64px;
+    font-family: Poiret-EN;
+    color: #000;
+    text-align: center;
+    text-shadow: 1px 1px 2px #333;
+  }
+  #background .content #about .about-members-box .member-info-box .top-box .name-box .label {
+    display: block;
+    padding: 7.2px 0 0 0;
+    font-size: 7.2px;
+    font-family: FZHJT-CH;
+    font-weight: bold;
+    color: #999;
+    text-align: center;
+  }
+  #background .content #about .about-members-box .member-info-box .experience {
+    font-size: 7.2px;
+    font-family: AdobeHT-CH;
+    color: #333;
+    text-align: left;
+  }
+  #background .footer {
+    width: 100%;
+    height: 10%;
+  }
+  #background .footer .copyright {
+    display: block;
+    float: right;
+    height: 100%;
+    font-size: 7.2px;
+    font-family: Khmer-EN;
+    text-align: center;
+    color: #333;
+  }
+}
+/* 小屏幕（平板，大于等于 900px） */
+@media (min-width: 900px) {
+  #background {
+    width: 720px;
+    height: 506.25px;
+    margin: 0 auto;
+  }
+  #background .header {
+    width: 100%;
+    height: 10%;
+  }
+  #background .header .logo {
+    display: block;
+    float: left;
+    width: 20%;
+    height: 80%;
+    margin: 0.9px 0 0 0;
+    background-image: url("../../img/blog/logo.png");
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+  }
+  #background .header .nevigation {
+    float: right;
+    width: 50%;
+    height: 100%;
+  }
+  #background .header .nevigation .box {
+    float: left;
+    width: 90px;
+    padding: 9px 0 0 0;
+  }
+  #background .header .nevigation .box a {
+    display: block;
+    height: 60%;
+    width: 60%;
+    margin: 0 auto;
+    padding: 0 0 2px 0;
+    font-size: 14.4px;
+    font-family: Poiret-EN;
+    text-align: center;
+    color: #000;
+    border-bottom: 1px solid #FFF;
+    transition: border-color 1s;
+  }
+  #background .header .nevigation .box a:hover {
+    border-bottom: 1px solid #000;
+  }
+  #background .content {
+    display: block;
+    width: 100%;
+    height: 80%;
+  }
+  #background .content #welcome {
+    display: none;
+    width: 40%;
+    height: 70%;
+    margin: 0 auto;
+    margin-top: 54px;
+  }
+  #background .content #welcome .glass {
+    display: block;
+    width: 100%;
+    height: 45%;
+    background-image: url("../../img/blog/glass.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+  }
+  #background .content #welcome .title {
+    display: block;
+    width: 100%;
+    height: 10%;
+    font-size: 16.2px;
+    font-family: Eras-EN;
+    font-weight: bold;
+    text-align: center;
+    color: #000;
+  }
+  #background .content #welcome .subtitle {
+    display: block;
+    width: 100%;
+    height: 30%;
+    padding: 18px 0 0 0;
+    font-size: 11.7px;
+    font-family: Eras-EN;
+    text-align: center;
+    color: #333;
+  }
+  #background .content #catalog {
+    width: 100%;
+    height: 100%;
+    padding: 18px 0 18px 0;
+  }
+  #background .content #catalog .left-box {
+    float: left;
+    width: 20%;
+    height: 100%;
+    border-right: 1px solid #999;
+  }
+  #background .content #catalog .left-box .banner-box {
+    display: block;
+    width: 117px;
+    height: 90px;
+    padding: 4.5px;
+    margin: 18px auto;
+    border: 1px solid #999;
+    box-shadow: 1px 1px 3px #333;
+  }
+  #background .content #catalog .left-box .banner-box img {
+    width: 108px;
+    height: 81px;
+  }
+  #background .content #catalog .left-box .abstract {
+    display: -webkit-box;
+    /** 对象作为伸缩盒子模型显示 **/
+    margin: 0 auto;
+    padding: 0 4.5px;
+    width: 135px;
+    height: 60%;
+    font-size: 9px;
+    line-height: 14px;
+    font-family: AdobeHT-CH;
+    color: #333;
+    text-align: left;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-wrap: break-word;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+    -webkit-line-clamp: 10;
+    /** 显示的行数 **/
+  }
+  #background .content #catalog .main-box {
+    float: left;
+    width: 80%;
+    height: 100%;
+    display: none;
+  }
+  #background .content #catalog .main-box .left-second-box {
+    float: left;
+    width: 10%;
+    height: 100%;
+  }
+  #background .content #catalog .main-box .left-second-box span {
+    display: block;
+    width: 40%;
+    height: 100%;
+    margin: 0 auto;
+    background-image: url("../../img/blog/leftward.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    transition: opacity 1s;
+    opacity: 0;
+  }
+  #background .content #catalog .main-box .left-second-box span:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  #background .content #catalog .main-box .middle-box {
+    float: left;
+    width: 80%;
+    height: 100%;
+    padding: 0 9px 0 0;
+    overflow: scroll;
+  }
+  #background .content #catalog .main-box .middle-box .title-box {
+    width: 100%;
+    height: 36px;
+    display: none;
+  }
+  #background .content #catalog .main-box .middle-box .title-box .show-box {
+    width: 100%;
+    height: 100%;
+    border-left: 2px solid #FFF;
+    padding: 9px 0 0 0;
+    transition: border-color 1s;
+  }
+  #background .content #catalog .main-box .middle-box .title-box .show-box span {
+    display: block;
+    float: left;
+    height: 100%;
+    text-align: center;
+    font-family: FZHJT-CH;
+  }
+  #background .content #catalog .main-box .middle-box .title-box .show-box .num {
+    width: 10%;
+    color: #333;
+    font-size: 18px;
+    font-family: Poiret-EN;
+  }
+  #background .content #catalog .main-box .middle-box .title-box .show-box .title {
+    width: 50%;
+    color: #000;
+    padding: 5.4px 0 0 0;
+    font-size: 13.5px;
+    font-family: Eras-EN;
+    overflow: hidden;
+  }
+  #background .content #catalog .main-box .middle-box .title-box .show-box .author {
+    width: 30%;
+    color: #333;
+    padding: 10.8px 0 0 0;
+    font-size: 9px;
+    font-weight: bold;
+    font-family: FZHJT-CH;
+    overflow: hidden;
+  }
+  #background .content #catalog .main-box .middle-box .title-box .show-box .time {
+    width: 10%;
+    color: #333;
+    padding: 13.5px 0 0 0;
+    font-size: 6.3px;
+    font-family: Khmer-EN;
+  }
+  #background .content #catalog .main-box .middle-box .title-box .show-box:hover {
+    border-color: #C1C1C1;
+    cursor: pointer;
+  }
+  #background .content #catalog .main-box .middle-box .title-box .hide-box {
+    display: none;
+    padding: 9px 0;
+    font-size: 9px;
+  }
+  #background .content #catalog .main-box .middle-box .detail-title {
+    width: 100%;
+    color: #000;
+    padding: 0 0 9px 0;
+    font-size: 18px;
+    font-family: Eras-EN;
+    text-align: center;
+    letter-spacing: 0.1em;
+  }
+  #background .content #catalog .main-box .middle-box .detail-box {
+    width: 100%;
+    padding: 0 18px 9px 0;
+    color: #999;
+    font-size: 9px;
+    font-family: Eras-EN;
+    font-weight: bold;
+  }
+  #background .content #catalog .main-box .middle-box .detail-box span {
+    display: block;
+    float: right;
+    width: 25%;
+    text-align: right;
+  }
+  #background .content #catalog .main-box .middle-box .detail-banner {
+    width: 100%;
+    padding: 18px 0;
+  }
+  #background .content #catalog .main-box .middle-box .detail-banner img {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    box-shadow: 2px 2px 5px #333;
+  }
+  #background .content #catalog .main-box .right-second-box {
+    float: left;
+    width: 10%;
+    height: 100%;
+  }
+  #background .content #catalog .main-box .right-second-box span {
+    display: block;
+    width: 40%;
+    height: 100%;
+    margin: 0 auto;
+    background-image: url("../../img/blog/rightward.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    transition: opacity 1s;
+    opacity: 0;
+  }
+  #background .content #catalog .main-box .right-second-box span:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  #background .content #about {
+    width: 100%;
+    height: 100%;
+    padding: 18px 0 18px 0;
+  }
+  #background .content #about .about-members-box {
+    width: 100%;
+    height: 540px;
+  }
+  #background .content #about .about-members-box .member-info-box {
+    float: left;
+    width: 25%;
+    height: 270px;
+    padding: 9px;
+  }
+  #background .content #about .about-members-box .member-info-box .top-box {
+    width: 100%;
+    height: 90px;
+  }
+  #background .content #about .about-members-box .member-info-box .top-box .avatar-box {
+    float: left;
+    width: 72px;
+    height: 72px;
+    margin: 0 9px 9px 0;
+    border-radius: 50%;
+    border: 3px soild #999;
+    box-shadow: 2px 2px 4px #333;
+    overflow: hidden;
+  }
+  #background .content #about .about-members-box .member-info-box .top-box .avatar-box img {
+    width: 100%;
+    height: 100%;
+  }
+  #background .content #about .about-members-box .member-info-box .top-box .name-box {
+    float: left;
+    width: 72px;
+    height: 72px;
+  }
+  #background .content #about .about-members-box .member-info-box .top-box .name-box .name {
+    display: block;
+    padding: 9px 0 0 0;
+    font-size: 10.8px;
+    font-family: Poiret-EN;
+    color: #000;
+    text-align: center;
+    text-shadow: 1px 1px 2px #333;
+  }
+  #background .content #about .about-members-box .member-info-box .top-box .name-box .label {
+    display: block;
+    padding: 9px 0 0 0;
+    font-size: 9px;
+    font-family: FZHJT-CH;
+    font-weight: bold;
+    color: #999;
+    text-align: center;
+  }
+  #background .content #about .about-members-box .member-info-box .experience {
+    font-size: 9px;
+    font-family: AdobeHT-CH;
+    color: #333;
+    text-align: left;
+  }
+  #background .footer {
+    width: 100%;
+    height: 10%;
+  }
+  #background .footer .copyright {
+    display: block;
+    float: right;
+    height: 100%;
+    font-size: 9px;
+    font-family: Khmer-EN;
+    text-align: center;
+    color: #333;
+  }
+}
+/* 中等屏幕（桌面显示器，大于等于 1280px） */
+@media screen and (min-width: 1280px) {
+  #background {
+    width: 1024px;
+    height: 720px;
+    margin: 0 auto;
+  }
+  #background .header {
+    width: 100%;
+    height: 10%;
+  }
+  #background .header .logo {
+    display: block;
+    float: left;
+    width: 20%;
+    height: 80%;
+    margin: 1.28px 0 0 0;
+    background-image: url("../../img/blog/logo.png");
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+  }
+  #background .header .nevigation {
+    float: right;
+    width: 50%;
+    height: 100%;
+  }
+  #background .header .nevigation .box {
+    float: left;
+    width: 128px;
+    padding: 12.8px 0 0 0;
+  }
+  #background .header .nevigation .box a {
+    display: block;
+    height: 60%;
+    width: 60%;
+    margin: 0 auto;
+    padding: 0 0 2px 0;
+    font-size: 20.48px;
+    font-family: Poiret-EN;
+    text-align: center;
+    color: #000;
+    border-bottom: 1px solid #FFF;
+    transition: border-color 1s;
+  }
+  #background .header .nevigation .box a:hover {
+    border-bottom: 1px solid #000;
+  }
+  #background .content {
+    display: block;
+    width: 100%;
+    height: 80%;
+  }
+  #background .content #welcome {
+    display: none;
+    width: 40%;
+    height: 70%;
+    margin: 0 auto;
+    margin-top: 76.8px;
+  }
+  #background .content #welcome .glass {
+    display: block;
+    width: 100%;
+    height: 45%;
+    background-image: url("../../img/blog/glass.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+  }
+  #background .content #welcome .title {
+    display: block;
+    width: 100%;
+    height: 10%;
+    font-size: 23.04px;
+    font-family: Eras-EN;
+    font-weight: bold;
+    text-align: center;
+    color: #000;
+  }
+  #background .content #welcome .subtitle {
+    display: block;
+    width: 100%;
+    height: 30%;
+    padding: 25.6px 0 0 0;
+    font-size: 16.64px;
+    font-family: Eras-EN;
+    text-align: center;
+    color: #333;
+  }
+  #background .content #catalog {
+    width: 100%;
+    height: 100%;
+    padding: 25.6px 0 25.6px 0;
+  }
+  #background .content #catalog .left-box {
+    float: left;
+    width: 20%;
+    height: 100%;
+    border-right: 1px solid #999;
+  }
+  #background .content #catalog .left-box .banner-box {
+    display: block;
+    width: 166.4px;
+    height: 128px;
+    padding: 6.4px;
+    margin: 25.6px auto;
+    border: 1px solid #999;
+    box-shadow: 1px 1px 3px #333;
+  }
+  #background .content #catalog .left-box .banner-box img {
+    width: 153.6px;
+    height: 115.2px;
+  }
+  #background .content #catalog .left-box .abstract {
+    display: -webkit-box;
+    /** 对象作为伸缩盒子模型显示 **/
+    margin: 0 auto;
+    padding: 0 6.4px;
+    width: 192px;
+    height: 60%;
+    font-size: 12.8px;
+    line-height: 17.8px;
+    font-family: AdobeHT-CH;
+    color: #333;
+    text-align: left;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-wrap: break-word;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+    -webkit-line-clamp: 10;
+    /** 显示的行数 **/
+  }
+  #background .content #catalog .main-box {
+    float: left;
+    width: 80%;
+    height: 100%;
+    display: none;
+  }
+  #background .content #catalog .main-box .left-second-box {
+    float: left;
+    width: 10%;
+    height: 100%;
+  }
+  #background .content #catalog .main-box .left-second-box span {
+    display: block;
+    width: 40%;
+    height: 100%;
+    margin: 0 auto;
+    background-image: url("../../img/blog/leftward.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    transition: opacity 1s;
+    opacity: 0;
+  }
+  #background .content #catalog .main-box .left-second-box span:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  #background .content #catalog .main-box .middle-box {
+    float: left;
+    width: 80%;
+    height: 100%;
+    padding: 0 12.8px 0 0;
+    overflow: scroll;
+  }
+  #background .content #catalog .main-box .middle-box .title-box {
+    width: 100%;
+    height: 51.2px;
+    display: none;
+  }
+  #background .content #catalog .main-box .middle-box .title-box .show-box {
+    width: 100%;
+    height: 100%;
+    border-left: 2px solid #FFF;
+    padding: 12.8px 0 0 0;
+    transition: border-color 1s;
+  }
+  #background .content #catalog .main-box .middle-box .title-box .show-box span {
+    display: block;
+    float: left;
+    height: 100%;
+    text-align: center;
+    font-family: FZHJT-CH;
+  }
+  #background .content #catalog .main-box .middle-box .title-box .show-box .num {
+    width: 10%;
+    color: #333;
+    font-size: 25.6px;
+    font-family: Poiret-EN;
+  }
+  #background .content #catalog .main-box .middle-box .title-box .show-box .title {
+    width: 50%;
+    color: #000;
+    padding: 7.68px 0 0 0;
+    font-size: 19.2px;
+    font-family: Eras-EN;
+    overflow: hidden;
+  }
+  #background .content #catalog .main-box .middle-box .title-box .show-box .author {
+    width: 30%;
+    color: #333;
+    padding: 15.36px 0 0 0;
+    font-size: 12.8px;
+    font-weight: bold;
+    font-family: FZHJT-CH;
+    overflow: hidden;
+  }
+  #background .content #catalog .main-box .middle-box .title-box .show-box .time {
+    width: 10%;
+    color: #333;
+    padding: 19.2px 0 0 0;
+    font-size: 8.96px;
+    font-family: Khmer-EN;
+  }
+  #background .content #catalog .main-box .middle-box .title-box .show-box:hover {
+    border-color: #C1C1C1;
+    cursor: pointer;
+  }
+  #background .content #catalog .main-box .middle-box .title-box .hide-box {
+    display: none;
+    padding: 12.8px 0;
+    font-size: 12.8px;
+  }
+  #background .content #catalog .main-box .middle-box .detail-title {
+    width: 100%;
+    color: #000;
+    padding: 0 0 12.8px 0;
+    font-size: 25.6px;
+    font-family: Eras-EN;
+    text-align: center;
+    letter-spacing: 0.1em;
+  }
+  #background .content #catalog .main-box .middle-box .detail-box {
+    width: 100%;
+    padding: 0 25.6px 12.8px 0;
+    color: #999;
+    font-size: 12.8px;
+    font-family: Eras-EN;
+    font-weight: bold;
+  }
+  #background .content #catalog .main-box .middle-box .detail-box span {
+    display: block;
+    float: right;
+    width: 25%;
+    text-align: right;
+  }
+  #background .content #catalog .main-box .middle-box .detail-banner {
+    width: 100%;
+    padding: 25.6px 0;
+  }
+  #background .content #catalog .main-box .middle-box .detail-banner img {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    box-shadow: 2px 2px 5px #333;
+  }
+  #background .content #catalog .main-box .right-second-box {
+    float: left;
+    width: 10%;
+    height: 100%;
+  }
+  #background .content #catalog .main-box .right-second-box span {
+    display: block;
+    width: 40%;
+    height: 100%;
+    margin: 0 auto;
+    background-image: url("../../img/blog/rightward.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    transition: opacity 1s;
+    opacity: 0;
+  }
+  #background .content #catalog .main-box .right-second-box span:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  #background .content #about {
+    width: 100%;
+    height: 100%;
+    padding: 25.6px 0 25.6px 0;
+  }
+  #background .content #about .about-members-box {
+    width: 100%;
+    height: 768px;
+  }
+  #background .content #about .about-members-box .member-info-box {
+    float: left;
+    width: 25%;
+    height: 384px;
+    padding: 12.8px;
+  }
+  #background .content #about .about-members-box .member-info-box .top-box {
+    width: 100%;
+    height: 128px;
+  }
+  #background .content #about .about-members-box .member-info-box .top-box .avatar-box {
+    float: left;
+    width: 102.4px;
+    height: 102.4px;
+    margin: 0 12.8px 12.8px 0;
+    border-radius: 50%;
+    border: 3px soild #999;
+    box-shadow: 2px 2px 4px #333;
+    overflow: hidden;
+  }
+  #background .content #about .about-members-box .member-info-box .top-box .avatar-box img {
+    width: 100%;
+    height: 100%;
+  }
+  #background .content #about .about-members-box .member-info-box .top-box .name-box {
+    float: left;
+    width: 102.4px;
+    height: 102.4px;
+  }
+  #background .content #about .about-members-box .member-info-box .top-box .name-box .name {
+    display: block;
+    padding: 12.8px 0 0 0;
+    font-size: 15.36px;
+    font-family: Poiret-EN;
+    color: #000;
+    text-align: center;
+    text-shadow: 1px 1px 2px #333;
+  }
+  #background .content #about .about-members-box .member-info-box .top-box .name-box .label {
+    display: block;
+    padding: 12.8px 0 0 0;
+    font-size: 12.8px;
+    font-family: FZHJT-CH;
+    font-weight: bold;
+    color: #999;
+    text-align: center;
+  }
+  #background .content #about .about-members-box .member-info-box .experience {
+    font-size: 12.8px;
+    font-family: AdobeHT-CH;
+    color: #333;
+    text-align: left;
+  }
+  #background .footer {
+    width: 100%;
+    height: 10%;
+  }
+  #background .footer .copyright {
+    display: block;
+    float: right;
+    height: 100%;
+    font-size: 12.8px;
+    font-family: Khmer-EN;
+    text-align: center;
+    color: #333;
+  }
+}
+/* 大屏幕（1080P显示器，大于等于 1600px） */
+@media screen and (min-width: 1600px) {
+  #background {
+    width: 1280px;
+    height: 900px;
+    margin: 0 auto;
+  }
+  #background .header {
+    width: 100%;
+    height: 10%;
+  }
+  #background .header .logo {
+    display: block;
+    float: left;
+    width: 20%;
+    height: 80%;
+    margin: 1.6px 0 0 0;
+    background-image: url("../../img/blog/logo.png");
+    background-repeat: no-repeat;
+    background-size: 80%;
+    background-position: center;
+  }
+  #background .header .nevigation {
+    float: right;
+    width: 50%;
+    height: 100%;
+  }
+  #background .header .nevigation .box {
+    float: left;
+    width: 160px;
+    padding: 16px 0 0 0;
+  }
+  #background .header .nevigation .box a {
+    display: block;
+    height: 60%;
+    width: 60%;
+    margin: 0 auto;
+    padding: 0 0 2px 0;
+    font-size: 25.6px;
+    font-family: Poiret-EN;
+    text-align: center;
+    color: #000;
+    border-bottom: 1px solid #FFF;
+    transition: border-color 1s;
+  }
+  #background .header .nevigation .box a:hover {
+    border-bottom: 1px solid #000;
+  }
+  #background .content {
+    display: block;
+    width: 100%;
+    height: 80%;
+  }
+  #background .content #welcome {
+    display: none;
+    width: 40%;
+    height: 70%;
+    margin: 0 auto;
+    margin-top: 96px;
+  }
+  #background .content #welcome .glass {
+    display: block;
+    width: 100%;
+    height: 45%;
+    background-image: url("../../img/blog/glass.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+  }
+  #background .content #welcome .title {
+    display: block;
+    width: 100%;
+    height: 10%;
+    font-size: 28.8px;
+    font-family: Eras-EN;
+    font-weight: bold;
+    text-align: center;
+    color: #000;
+  }
+  #background .content #welcome .subtitle {
+    display: block;
+    width: 100%;
+    height: 30%;
+    padding: 32px 0 0 0;
+    font-size: 20.8px;
+    font-family: Eras-EN;
+    text-align: center;
+    color: #333;
+  }
+  #background .content #catalog {
+    width: 100%;
+    height: 100%;
+    padding: 32px 0 32px 0;
+  }
+  #background .content #catalog .left-box {
+    float: left;
+    width: 20%;
+    height: 100%;
+    border-right: 1px solid #999;
+  }
+  #background .content #catalog .left-box .banner-box {
+    display: block;
+    width: 208px;
+    height: 160px;
+    padding: 8px;
+    margin: 32px auto;
+    border: 1px solid #999;
+    box-shadow: 1px 1px 3px #333;
+  }
+  #background .content #catalog .left-box .banner-box img {
+    width: 192px;
+    height: 144px;
+  }
+  #background .content #catalog .left-box .abstract {
+    display: -webkit-box;
+    /** 对象作为伸缩盒子模型显示 **/
+    margin: 0 auto;
+    padding: 0 8px;
+    width: 240px;
+    height: 60%;
+    font-size: 16px;
+    line-height: 21px;
+    font-family: AdobeHT-CH;
+    color: #333;
+    text-align: left;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-wrap: break-word;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    /** 设置或检索伸缩盒对象的子元素的排列方式 **/
+    -webkit-line-clamp: 10;
+    /** 显示的行数 **/
+  }
+  #background .content #catalog .main-box {
+    float: left;
+    width: 80%;
+    height: 100%;
+    display: none;
+  }
+  #background .content #catalog .main-box .left-second-box {
+    float: left;
+    width: 10%;
+    height: 100%;
+  }
+  #background .content #catalog .main-box .left-second-box span {
+    display: block;
+    width: 40%;
+    height: 100%;
+    margin: 0 auto;
+    background-image: url("../../img/blog/leftward.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    transition: opacity 1s;
+    opacity: 0;
+  }
+  #background .content #catalog .main-box .left-second-box span:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  #background .content #catalog .main-box .middle-box {
+    float: left;
+    width: 80%;
+    height: 100%;
+    padding: 0 16px 0 0;
+    overflow: scroll;
+  }
+  #background .content #catalog .main-box .middle-box .title-box {
+    width: 100%;
+    height: 64px;
+    display: none;
+  }
+  #background .content #catalog .main-box .middle-box .title-box .show-box {
+    width: 100%;
+    height: 100%;
+    border-left: 2px solid #FFF;
+    padding: 16px 0 0 0;
+    transition: border-color 1s;
+  }
+  #background .content #catalog .main-box .middle-box .title-box .show-box span {
+    display: block;
+    float: left;
+    height: 100%;
+    text-align: center;
+    font-family: FZHJT-CH;
+  }
+  #background .content #catalog .main-box .middle-box .title-box .show-box .num {
+    width: 10%;
+    color: #333;
+    font-size: 32px;
+    font-family: Poiret-EN;
+  }
+  #background .content #catalog .main-box .middle-box .title-box .show-box .title {
+    width: 50%;
+    color: #000;
+    padding: 9.6px 0 0 0;
+    font-size: 24px;
+    font-family: Eras-EN;
+    overflow: hidden;
+  }
+  #background .content #catalog .main-box .middle-box .title-box .show-box .author {
+    width: 30%;
+    color: #333;
+    padding: 19.2px 0 0 0;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: FZHJT-CH;
+    overflow: hidden;
+  }
+  #background .content #catalog .main-box .middle-box .title-box .show-box .time {
+    width: 10%;
+    color: #333;
+    padding: 24px 0 0 0;
+    font-size: 11.2px;
+    font-family: Khmer-EN;
+  }
+  #background .content #catalog .main-box .middle-box .title-box .show-box:hover {
+    border-color: #C1C1C1;
+    cursor: pointer;
+  }
+  #background .content #catalog .main-box .middle-box .title-box .hide-box {
+    display: none;
+    padding: 16px 0;
+    font-size: 16px;
+  }
+  #background .content #catalog .main-box .middle-box .detail-title {
+    width: 100%;
+    color: #000;
+    padding: 0 0 16px 0;
+    font-size: 32px;
+    font-family: Eras-EN;
+    text-align: center;
+    letter-spacing: 0.1em;
+  }
+  #background .content #catalog .main-box .middle-box .detail-box {
+    width: 100%;
+    padding: 0 32px 16px 0;
+    color: #999;
+    font-size: 16px;
+    font-family: Eras-EN;
+    font-weight: bold;
+  }
+  #background .content #catalog .main-box .middle-box .detail-box span {
+    display: block;
+    float: right;
+    width: 25%;
+    text-align: right;
+  }
+  #background .content #catalog .main-box .middle-box .detail-banner {
+    width: 100%;
+    padding: 32px 0;
+  }
+  #background .content #catalog .main-box .middle-box .detail-banner img {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    box-shadow: 2px 2px 5px #333;
+  }
+  #background .content #catalog .main-box .right-second-box {
+    float: left;
+    width: 10%;
+    height: 100%;
+  }
+  #background .content #catalog .main-box .right-second-box span {
+    display: block;
+    width: 40%;
+    height: 100%;
+    margin: 0 auto;
+    background-image: url("../../img/blog/rightward.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    transition: opacity 1s;
+    opacity: 0;
+  }
+  #background .content #catalog .main-box .right-second-box span:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+  #background .content #about {
+    width: 100%;
+    height: 100%;
+    padding: 32px 0 32px 0;
+  }
+  #background .content #about .about-members-box {
+    width: 100%;
+    height: 960px;
+  }
+  #background .content #about .about-members-box .member-info-box {
+    float: left;
+    width: 25%;
+    height: 480px;
+    padding: 16px;
+  }
+  #background .content #about .about-members-box .member-info-box .top-box {
+    width: 100%;
+    height: 160px;
+  }
+  #background .content #about .about-members-box .member-info-box .top-box .avatar-box {
+    float: left;
+    width: 128px;
+    height: 128px;
+    margin: 0 16px 16px 0;
+    border-radius: 50%;
+    border: 3px soild #999;
+    box-shadow: 2px 2px 4px #333;
+    overflow: hidden;
+  }
+  #background .content #about .about-members-box .member-info-box .top-box .avatar-box img {
+    width: 100%;
+    height: 100%;
+  }
+  #background .content #about .about-members-box .member-info-box .top-box .name-box {
+    float: left;
+    width: 128px;
+    height: 128px;
+  }
+  #background .content #about .about-members-box .member-info-box .top-box .name-box .name {
+    display: block;
+    padding: 16px 0 0 0;
+    font-size: 19.2px;
+    font-family: Poiret-EN;
+    color: #000;
+    text-align: center;
+    text-shadow: 1px 1px 2px #333;
+  }
+  #background .content #about .about-members-box .member-info-box .top-box .name-box .label {
+    display: block;
+    padding: 16px 0 0 0;
+    font-size: 16px;
+    font-family: FZHJT-CH;
+    font-weight: bold;
+    color: #999;
+    text-align: center;
+  }
+  #background .content #about .about-members-box .member-info-box .experience {
+    font-size: 16px;
+    font-family: AdobeHT-CH;
+    color: #333;
+    text-align: left;
+  }
+  #background .footer {
+    width: 100%;
+    height: 10%;
+  }
+  #background .footer .copyright {
+    display: block;
+    float: right;
+    height: 100%;
+    font-size: 16px;
+    font-family: Khmer-EN;
+    text-align: center;
+    color: #333;
+  }
+}

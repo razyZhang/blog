@@ -1,0 +1,640 @@
+@font-face { 
+  font-family: Indie Flower; /*这里是说明调用来的字体名字*/ 
+  /*src: url('../../IndieFlower.ttf'); 这里是字体文件路径*/ 
+} 
+
+html {
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    font-family: '黑体'
+}
+
+body {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+}
+
+input, button, select, textarea {
+	border: none;
+	outline: none;
+	-webkit-appearance: none;
+}
+
+input::-webkit-input-placeholder{
+    color:white;
+}
+input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+    color:white;
+}
+input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+    color:white;
+}
+input:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+    color:white;
+}
+img {
+  max-width: 100%; /* This rule is very important, please do not ignore this! */
+}
+
+#background{
+	width: 100%;
+	min-height: 720px;
+	height: calc(100vw*108/192);
+	padding: 0;
+}
+
+#background .left{
+	height: 100%;
+	min-height: 300px;
+	background-color: #22537f;
+	padding: 0;
+}
+
+#background .right{
+	height: 100%;
+	min-height: 300px;
+	background-color: #FFF;
+	padding: 0;
+}
+
+#background .box{
+	position: absolute;
+	min-height: 200px;
+	min-width: 500px;
+	max-height: 400px;
+	max-width: 800px;
+	padding: 1px;
+	width: 40%; 
+	background-color:  #FFF;
+	top: 30%;
+	left: 30%;
+	height: 40%;
+	border-radius: 20px;
+	box-shadow: 4px 3px 2px #666666;
+}
+
+#background .box .left-page{
+	float: right;
+	width: 50%;
+	height: 100%;
+	background-color: #fff;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+}
+
+#background .box .right-page{
+	float: right;
+	width: 50%;
+	height: 100%;
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-top: 3%;
+	background-color: #22537f;
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+	font-family: 'Indie Flower';
+	z-index: 300;
+}
+
+#background .box .right-page .info-box{
+	display: block;
+	margin: 0 auto;
+	padding-top: 30px;
+	text-align: center;
+	width: 120px;
+}
+
+#background .box .right-page .info-box img{
+	width:120px;
+	display: block;
+}
+
+#background .box .right-page .info-box span{
+	display: block;
+	margin-top: 10px;
+	color: #FFF;
+	font-size: 16px;
+}
+
+#background .box .right-page .info-box p{
+	color: #FFF;
+}
+
+#background .box .right-page .switch-box{
+	float: right;
+	background-image: url('../../img/front/leaf.png');
+	background-size: 98%;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 35px;
+	width: 70px;
+	font-size: 16px;
+	cursor: pointer;
+	z-index: 100;
+}
+
+#background .box .right-page .switch-box .right-leaf{
+	float: left;
+	height: 100%;
+	width: 50%;
+	padding: 8px 0 0 6px;
+	color: #FFF;
+	text-align: left;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#background .box .right-page .switch-box .left-leaf{
+	float: left;
+	background-image: url('../../img/front/left-leaf.png');
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 100%;
+	width: 50%;
+	color: #22537f;
+	padding: 8px 0 0 9px;
+	text-align: left;
+}
+
+#background .box .right-page .type-box{
+	margin: 0 auto;
+	margin-top: 70px;
+	height: 150px;
+	width: 200px;
+}
+
+#background .box .right-page .type-box .user{
+	position: relative;
+	padding: 5px 0;
+	height: 50px;
+	width: 250px;
+}
+
+#background .box .right-page .type-box .user .cover{
+	position: absolute;
+	left: 30px;
+	width: 140px;
+	height: 30px;
+	border-radius: 5px;
+	border: 1px solid #FFF;
+	z-index: 100;
+}
+
+#background .box .right-page .type-box .user .user-icon{
+	position: absolute;
+	display: block;
+	left: 140px;
+	width: 30px;
+	height: 30px;
+	background-image: url('../../img/front/user.png');
+	background-size: 50% 70%;
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 100;
+}
+
+#background .box .right-page .type-box .user .field{
+	position: absolute;
+	display: none;
+	left: 160px;
+	width: 0px;
+	height: 30px;
+	background-color: #22537f;
+	border-bottom: #FFF solid 1px;
+	font-size: 18px;
+	text-align: center;
+	letter-spacing: 1px;
+	color: #FFF;
+}
+
+#background .box .right-page .type-box .user .draw{
+	position: absolute;
+	display: block;
+	left: 180px;
+	top: 9px;
+	width: 30px;
+	height: 28px;
+}
+
+#background .box .right-page .type-box .user .check-icon{
+	position: absolute;
+	display: none;
+	left: 174px;
+	top: 5px;
+	width: 32px;
+	height: 28px;
+	background-image:url('../../img/front/cross.png');
+	background-size: 50%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#background .box .right-page .type-box .pswd{
+	position: relative;
+	padding: 5px 0;
+	height: 50px;
+	width: 250px;
+}
+
+#background .box .right-page .type-box .pswd .cover{
+	position: absolute;
+	left: 30px;
+	width: 140px;
+	height: 30px;
+	border-radius: 5px;
+	border: 1px solid #FFF;
+	z-index: 100;
+}
+
+#background .box .right-page .type-box .pswd .draw{
+	position: absolute;
+	display: block;
+	left: 180px;
+	top: 9px;
+	width: 30px;
+	height: 28px;
+}
+
+#background .box .right-page .type-box .pswd .check-icon{
+	position: absolute;
+	display: none;
+	left: 174px;
+	top: 5px;
+	width: 32px;
+	height: 28px;
+	background-image:url('../../img/front/cross.png');
+	background-size: 50%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#background .box .right-page .type-box .pswd .pswd-icon{
+	position: absolute;
+	display: block;
+	left: 140px;
+	width: 30px;
+	height: 30px;
+	background-image: url('../../img/front/pswd.png');
+	background-size: 70%;
+	background-repeat: no-repeat;
+	background-position: center;
+	z-index: 200;
+	transform: all 1s;
+}
+
+#background .box .right-page .type-box .pswd .field{
+	position: absolute;
+	display: none;
+	left: 160px;
+	width: 0px;
+	height: 30px;
+	background-color: #22537f;
+	border-bottom: #FFF solid 1px;
+	font-size: 18px;
+	text-align: center;
+	letter-spacing: 1px;
+	color: #FFF;
+}
+
+#background .box .right-page .type-box .rmyn{
+	height: 20%;
+	width: 100%;
+	padding-left: 25%;
+}
+
+#background .box .right-page .type-box .rmyn small{
+	float: left;
+	color: #FFF;
+	text-align: right;
+}
+
+#background .box .right-page .type-box .rmyn .check-box{
+	float: left;
+	margin-left: 5%;
+	background-color: #FFF;
+	height: 45%;
+	width: 8%;
+	border-radius: 4px;
+}
+
+#background .box .right-page .type-box .rmyn .check-box .hook{
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-image: url('../../img/front/right.png');
+	background-size: 65%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+#background .box .right-page .button-box{
+	margin: 0 auto;
+	width: 200px;
+	height: 25px;
+}
+
+#background .box .right-page .warning{
+	display: block;
+	margin: 0 auto;
+	margin-top: 20px;
+	width: 150px;
+	height: 25px;
+	font-size: 14px;
+	text-align: center;
+	color: #F2AB53;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 5px;
+	border: 1px solid #F2AB53;
+	font-family: 'Indie Flower';
+}
+
+#background .box .right-page .button-box .login{
+	float: left;
+	margin-left:10%;
+	margin-right: 10%;
+	width: 30%;
+	height: 100%;
+	border-radius: 5px;
+	border:1px solid #FFF;
+	background-color: #22537f;
+	color: #FFF;
+	font-size: 15px;
+	text-align: center;	
+	letter-spacing: 1px;
+}
+
+#background .box .right-page .button-box .login:hover{
+	box-shadow: 0 0 10px #FFF;
+	text-shadow: 1px 1px #999;
+	cursor: pointer;
+}
+
+#background .box .right-page .button-box .front{
+	float: left;
+	margin-left:10%;
+	margin-right: 10%;;
+	width: 30%;
+	height: 100%;
+	border-radius: 5px;
+	border:1px solid #FFF;
+	color: #FFF;
+	background-color: #22537f;
+	font-size: 15px;
+	text-align: center;	
+	letter-spacing: 1px;
+	padding-top: 1px;
+}
+
+#background .box .right-page .button-box .front:hover{
+	box-shadow: 0 0 10px #FFF;
+	text-shadow: 1px 1px #999;
+	cursor: pointer;
+}
+
+.regist-page{
+	display: none;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	font-family: 'Indie Flower';
+}
+
+.regist-page .regist-info{
+	position: absolute;
+	left: 0;
+	top:5%;
+	height: 100%;
+	width: 55%;
+}
+
+.regist-page .regist-box{
+	position: absolute;
+	left: 50%;
+	max-width: 250px;
+	min-width:  200px;
+	height: 100%;
+	width: 50%;
+}
+
+.regist-page .regist-box .img-box{
+	position: absolute;
+	height: 50%;
+	top: 20%;
+	min-height: 150px;
+	left: 10%;
+	width: 80%;
+	color: #FFF;
+	text-align: center;
+}
+
+.regist-page .regist-box .choose {
+    position: relative;
+    height: 6%;
+	top: 84%;
+	left: 10%;
+	width: 18%;
+	border-radius: 3px;
+	border:1px solid #FFF;
+	color: #FFF;
+	background-color: #22537f;
+	font-size: 10px;
+	text-align: center;	
+	letter-spacing: 1px;
+	padding-top: 1px;
+    display: inline-block;
+    overflow: hidden;
+    text-decoration: none;
+    text-indent: 0;
+}
+
+.regist-page .regist-box .choose input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+
+.regist-page .regist-box .reg-btn:hover {
+	box-shadow: 0 0 10px #FFF;
+	text-shadow: 1px 1px #999;
+	cursor: pointer;
+    text-decoration: none;
+}
+
+.regist-page .regist-box a:hover {
+	box-shadow: 0 0 10px #FFF;
+	text-shadow: 1px 1px #999;
+	cursor: pointer;
+    text-decoration: none;
+}
+
+.regist-page .regist-box .upload{
+	position: absolute;
+	height: 8%;
+	top: 82%;
+	left: 33%;
+	width: 22%;
+	border-radius: 4px;
+	border:1px solid #FFF;
+	color: #FFF;
+	background-color: #22537f;
+	font-size: 13px;
+	text-align: center;	
+	letter-spacing: 1px;
+	padding-top: 3px;
+}
+
+.regist-page .regist-box .regist{
+	position: absolute;
+	height: 10%;
+	top: 80%;
+	left: 60%;
+	width: 30%;
+	border-radius: 5px;
+	border:1px solid #FFF;
+	color: #FFF;
+	background-color: #22537f;
+	font-size: 15px;
+	text-align: center;	
+	letter-spacing: 1px;
+	padding-top: 4px;
+}
+
+.regist-page .regist-info input{
+	height: 10%;
+	margin-top: 7%;
+	margin-left: 15%;
+	width: 70%;
+	background-color: #22537f;
+	border-bottom: #FFF solid 1px;
+	font-size: 14px;
+	text-align: center;
+	letter-spacing: 1px;
+	color: #FFF;
+}
+
+.regist-page .regist-info input:focus {
+	border: #FFF dotted 1px;
+}
+
+#background .box .left-page .animate-box{
+	position: relative;
+	background-image: url('../../img/front/frog2.png');
+	background-size: 40% 44%;
+	background-position: center;
+	background-repeat: no-repeat;
+	margin: 0 auto;
+	margin-top: 20px;
+	height: 180px;
+	width: 200px;
+}
+
+#background .box .left-page .animate-box .leafs{
+	position: absolute;
+	display: none;
+	background-image: url('../../img/front/leaf.png');
+	background-size: 100% 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 32px;
+	height: 16px;
+}
+
+#background .box .left-page .animate-box .cloud{
+	position: absolute;
+	background-size: 100% 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 20px;
+	height: 20px;
+	display: none;
+	top: 80px;
+	left: 70px;
+}
+
+#background .box .left-page .animate-box .article{
+	background-image: url('../../img/front/articles.png');
+}
+
+#background .box .left-page .animate-box .math{
+	background-image: url('../../img/front/math.png');
+}
+
+#background .box .left-page .animate-box .relax{
+	background-image: url('../../img/front/relax.png');
+}
+
+#background .box .left-page .animate-box .technology{
+	background-image: url('../../img/front/technology.png');
+}
+
+#background .box .left-page .animate-box .game{
+	background-image: url('../../img/front/game.png');
+}
+
+#background .box .left-page .animate-box .music{
+	background-image: url('../../img/front/music.png');
+}
+
+#background .box .left-page .word-box{
+	height:80px;
+	width: 220px;
+	margin: 15px auto;
+	text-align: center;
+	font-family: 'Indie Flower';
+	color: #22537f;
+	font-size: 12px;
+	text-indent: 1px;
+}
+/*#screen .first-cube{
+	margin: 100px auto;
+	width: 400px;
+	height: 600px;
+}
+
+#screen .first-cube .top-box{
+	width: 100%;
+	height: 180px;
+}
+
+#screen .first-cube .top-box .pulse{
+	background-image: url('../../img/front/pulse.jpg');
+	background-size: 80% 80%;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 100%;
+}
+
+#screen .first-cube .center-box{
+	width: 100%;
+	height: 200px;
+}
+
+#screen .first-cube .center-box input{
+	background-color: #464848;
+	float: left;
+	margin: 20px 80px;
+	padding: 5px 20px;
+	height: 40px;
+	width: 240px;
+	border: 2px #29B7B4 solid;
+	border-radius: 5px;
+	opacity: 0.8;
+	text-align: center;
+	font-size: 16px;
+	color: #FFF;
+	letter-spacing: 0.03em;
+}
+
+#screen .first-cube .center-box input:focus{
+	opacity: 1;
+	box-shadow: 0px 0px 10px 0px #00FFF7;
+}*/
