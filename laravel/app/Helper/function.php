@@ -139,6 +139,30 @@ if (!function_exists("transferMonth")) {
     }
 }
 
+if (!function_exists("getIP")) {
+    function getIP()
+    {
+        if (isset($_SERVER)){
+            if (isset($_SERVER["HTTP_X_FORWARDED_FOR"])){
+                $realip = $_SERVER["HTTP_X_FORWARDED_FOR"];
+            } else if (isset($_SERVER["HTTP_CLIENT_IP"])) {
+                $realip = $_SERVER["HTTP_CLIENT_IP"];
+            } else {
+                $realip = $_SERVER["REMOTE_ADDR"];
+            }
+        } else {
+            if (getenv("HTTP_X_FORWARDED_FOR")){
+                $realip = getenv("HTTP_X_FORWARDED_FOR");
+            } else if (getenv("HTTP_CLIENT_IP")) {
+                $realip = getenv("HTTP_CLIENT_IP");
+            } else {
+                $realip = getenv("REMOTE_ADDR");
+            }
+        }
+        return $realip;
+    }
+}
+
 if (!function_exists("getcurl")) {
     /**
      * 模拟访问
@@ -189,9 +213,9 @@ if (!function_exists("getweather")) {
      * @param $url
      * @return string
      */
-    function getweather()
+    function getweather($ip)
     {
-        $url = 'https://apis.map.qq.com/ws/location/v1/ip?key=BOEBZ-FWXCW-BJARZ-RYP33-2PWN5-XOBF4';
+        $url = 'https://apis.map.qq.com/ws/location/v1/ip?ip='.urlencode($ip).'&key=BOEBZ-FWXCW-BJARZ-RYP33-2PWN5-XOBF4';
         $json =getcurl($url);
         $json = dealjson($json);
         $lat=$json[5];

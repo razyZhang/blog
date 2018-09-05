@@ -1,49 +1,43 @@
 $(function(){
   $('.input-box').each(function(){
-    $(this).find('.cover').bind({ 
+    $(this).find('.cover').click(function(){ 
+      if (!$(this).hasClass('chosen')) {
+        $(this).addClass('chosen').fadeOut(500,function(){
+          $(this).siblings('label').animate({
+            left:"0px"
+          },500,function(){});
 
-      "click":function(){
-        if (!$(this).hasClass('chosen')) {
-          $(this).addClass('chosen').stop().fadeOut(500,function(){
-            $(this).siblings('label').animate({
-              left:"0px"
-            },500,function(){});
-
-            $(this).next('.field').css('display','block').animate({
-              left:'30px',
-              width:'140px'
-            },500,function(){
-              $(this).focus().siblings('.cover').removeClass('chosen');
-            });
+          $(this).next('.field').css('display','block').animate({
+            left:'30px',
+            width:'140px'
+          },500,function(){
+            $(this).focus().siblings('.cover').removeClass('chosen');
           });
-        };
-      },
-
+        });
+      };
     });
 
-    $(this).find('.field').bind({
+    $(this).find('.field').blur(function(){
 
-      "blur":function(){ // 绑定失去焦点后操作
-        if (!$(this).parent().hasClass('chosen')) {
-          $(this).animate({
-            left:"160px",
-            width:'0px'
-          },500,function(){
-            $(this).css('display','none');
+      if (!$(this).parent().hasClass('chosen')) {
+        $(this).animate({
+          left:"160px",
+          width:'0px'
+        },500,function(){
+          $(this).css('display','none');
+        });
+
+        $(this).siblings('label').stop().animate({
+            left:"140px"
+        },500,function(){
+          $(this).siblings('.cover').stop().fadeIn(500,function(){
+
+            $(this).parent().removeClass('chosen');
           });
-
-          $(this).siblings('label').stop().animate({
-              left:"140px"
-          },500,function(){
-            $(this).siblings('.cover').stop().fadeIn(500,function(){
-
-              $(this).parent().removeClass('chosen');
-            });
-          });
-        }; 
-      },
-
+        }); 
+      };
     });
+    
   });
 
   $('.rmyn').click(function(){

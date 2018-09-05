@@ -73,7 +73,9 @@
 <script type="text/javascript" src="{{ URL::asset('js/input_check.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('js/base64.js') }}"></script>
 <script type="text/javascript" src="{{ URL::asset('js/rsa.js') }}"></script>
+<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
 <script type="text/javascript">
+var localIP = returnCitySN["cip"];
 var logtoken = $('#user').parent().prev().val();
 
 $('#user').change(function(){
@@ -110,7 +112,7 @@ $('#user').change(function(){
   );
 });
 
-$('#pswd').blur(function(){
+$('#pswd').change(function(){
   var value = $(this).val();
   var pswd_pattern = /^[A-Za-z0-9_]{4,20}$/;
   if (value == '') {
